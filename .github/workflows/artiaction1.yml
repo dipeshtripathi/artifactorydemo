@@ -29,7 +29,7 @@ jobs:
         uses: jfrog/setup-jfrog-cli@v1.1.0
         with:
           # URL of Artifactory instance
-          url: 'http://localhost:8081/artifactory'
+          url: 'http://192.168.33.11'
           # Type of authentication to use. Must be one of username, apikey or accesstoken. Defaults to apikey
           credentials type: 'username'
           # Username for Artifactory. Must be supplied when credentials type is username
