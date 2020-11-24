@@ -26,10 +26,10 @@ jobs:
       - name: jFrog CLI for Artifactory
         # You may pin to the exact commit or the version.
         # uses: advancedcsg-open/action-jfrog-cli@313e1c521402e7239d3facaf9b039f01a4e95e25
-        uses: advancedcsg-open/action-jfrog-cli@v1.2.0
+        uses: jfrog/setup-jfrog-cli@v1.1.0
         with:
           # URL of Artifactory instance
-          url: 'http://192.168.33.11'
+          url: 'http://192.168.33.11/artifactory'
           # Type of authentication to use. Must be one of username, apikey or accesstoken. Defaults to apikey
           credentials type: 'username'
           # Username for Artifactory. Must be supplied when credentials type is username
