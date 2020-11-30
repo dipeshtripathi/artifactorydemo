@@ -1,24 +1,13 @@
-name: "JFrog CLI Example"
-on: [push, pull_request]
-
+on: push
 jobs:
-  build:
-    
-    runs-on: self-hosted
-    container: amd64:/golang:latest
+  curl:
+    runs-on: ubuntu-latest
     steps:
-      - name: Setup JFrog CLI
-        uses: jfrog/setup-jfrog-cli@v1
-        env:
-          JF_ARTIFACTORY_SERVER: ${{ secrets.JF_RT_DEF }}
-          
-      - name: Checkout
-         uses: actions/checkout@v1
-      - name: Build
-         run:
-          jfrog rt go-config --servevr-id-resolve Default-Server --repo-resolve artifactorydemo
-          export CGO_ENABLED=0
-          jfrog rt go build -o jfrog -ldflags '-w -extldflags "-static"' main.go --module "FFrog CLI Example"
-          version=$(./jfrog -v | cut -d " " -f 3)
-          echo Build JFrog CLI version $version
-          jfrog rt u jfrog artifactorydemo
+    - name: curl
+      uses: wei/curl@master
+      with:
+        args: "https://github.com/dipeshtripathi/artifactorydemo/blob/main/README.md"
+    - name: curl
+      uses: wei/curl@master
+      with:
+        args: -u admin:admin -T - "http://192.168.33.11/artifactory/rtifactorydemo/test/folder/for/artifactorydemoreadme"
