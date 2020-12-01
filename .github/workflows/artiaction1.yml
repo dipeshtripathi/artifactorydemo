@@ -1,8 +1,0 @@
-- name: ls -a via ssh
-  uses: fifsky/ssh-action@master
-  with:
-    command: |
-      ping google.com
-    host: 52.172.164.91
-    user: dipesh
-    key: ${{ secrets.PRIVATE_KEY}}
