@@ -1,13 +1,8 @@
-on: push
-jobs:
-  curl:
-    runs-on: ubuntu-latest
-    steps:
-    - name: curl
-      uses: wei/curl@master
-      with:
-        args: "https://github.com/dipeshtripathi/artifactorydemo/blob/main/README.md"
-    - name: curl
-      uses: wei/curl@master
-      with:
-        args: -u admin:admin -T - "http://192.168.33.11/artifactory/rtifactorydemo/test/folder/for/artifactorydemoreadme"
+- name: ls -a via ssh
+  uses: fifsky/ssh-action@master
+  with:
+    command: |
+      ping google.com
+    host: 52.172.164.91
+    user: dipesh
+    key: ${{ secrets.PRIVATE_KEY}}
