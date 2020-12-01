@@ -27,4 +27,4 @@ jobs:
         with:
           hosts: 'dipesh@52.172.164.91'
           privateKey: ${{ secrets.PRIVATE_KEY }}
-          command: curl "https://github.com/dipeshtripathi/artifactorydemo/blob/main/README.md" | curl -u admin:admin -T - "http://artifactory.centralindia.cloudapp.azure.com/artifactory/artidemo/artifactorydemo/README.md"
+          command: sh /home/dipesh/script.sh
