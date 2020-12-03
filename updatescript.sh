@@ -5,5 +5,7 @@ folderstr=$(git diff-tree --no-commit-id --name-only -r $hash) # > /Users/diptri
 #cat /Users/diptripa/git-updated-files/difference.txt
 echo $folderstr
 
-curl -u admin:admin -T $folderstr "http://artifactory.centralindia.cloudapp.azure.com/artifactory/artidemo/$folderstr"
-
+for file in $folderstr
+do
+curl -u admin:admin -T $file "http://artifactory.centralindia.cloudapp.azure.com/artifactory/artidemo/$file"
+done
