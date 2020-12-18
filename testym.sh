@@ -7,5 +7,5 @@ echo $folderstr
 
 for file in $folderstr
 do
-curl -u admin:admin -T $file "http://localhost/artifactory/dipeshtest/"
+curl -u admin:admin -T $file "http://localhost/artifactory/dipeshtest/$file"
 done
