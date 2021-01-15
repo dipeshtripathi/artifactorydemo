@@ -6,6 +6,6 @@ more content added.
 updating a few more things j
 ye bhai chalaiy apan ne script.bk
 Lovely!
-mast
+mastnjk
 h
 hj
