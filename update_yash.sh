@@ -57,7 +57,7 @@ checkout_new_data(){
 	do 
 		# get all the list of changed files
 		#echo $i 
-		resrtric_file=$(echo "$i" | grep '^f2\/.*$')
+		resrtric_file=$(echo "$i" | grep '^folder1\/.*$')
 		if [ ! -z "$resrtric_file" ]
 		then
 			echo "restriced files: $resrtric_file"
