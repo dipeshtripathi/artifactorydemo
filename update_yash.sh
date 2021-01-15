@@ -69,7 +69,7 @@ checkout_new_data(){
 			if [ -s "$current_path" ]
 			then 
 				echo $current_path
-				curl -u admin:admin -T $current_path "http://localhost:8082/artifactory/artifactorydemo/$i"
+				curl -u admin:admin -T $current_path "http://192.168.1.5:8082/artifactory/artifactorydemo/$i"
 				#curl -H "Authorization: Bearer AKCp5ekTAcftLVRsuY55umy51KKLLxCDqpgSwnCzqPhCMD8zDBLfwxue19oXzuq5qFwdxC5y5" -T "$current_path" "https://engci-maven-master.cisco.com/artifactory/devx-soc-configs/test/$i"
 				tmp2="$tmp1/run.sh"
 				echo $tmp2
